@@ -9,31 +9,12 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      user_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Users",
-          key: "id",
-        },
-      },
-      type: {
-        type: Sequelize.ENUM,
-        values: ["default", "personal", "shooping", "whislist", "work"],
-        defaultValue: "default",
-      },
-      status: {
-        type: Sequelize.ENUM,
-        values: ["pending", "completed"],
-        defaultValue: "pending",
-      },
-      name: {
+      task: {
         type: Sequelize.STRING,
       },
-      date: {
-        type: Sequelize.DATE,
-      },
-      time: {
-        type: Sequelize.STRING,
+      done: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
       },
       createdAt: {
         allowNull: false,
